@@ -1,14 +1,17 @@
-#include "../tests/utest.h"
+#include <limits>
 
-#include "../net/include/CPUMatrix.h"
+#include "../tests/utest.h"
+#include "../net/include/EngineCUDA.h"
+#include "../net/include/EngineSerial.h"
+#include "../net/include/Matrix.h"
 
 constexpr static auto near_equal = [](float lhs, float rhs) {
     return std::abs(lhs - rhs) < 2.0f * std::numeric_limits<float>::epsilon();
 };
 
-UTEST(CPUMatrix, TestSmoke)
+UTEST(Matrix, TestSmoke)
 {
-    CPUMatrix c(0, 0);
+    Matrix<EngineCUDA> c(0, 0);
     ASSERT_TRUE(true);
 }
 

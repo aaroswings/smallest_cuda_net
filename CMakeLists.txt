@@ -14,7 +14,10 @@ enable_testing()
 include_directories("./net/include")
 
 add_executable(smallestnet_tests 
-net/src/CPUMatrix.cpp
+net/src/Engine.cpp
+net/src/EngineCUDA.cpp
+net/src/EngineSerial.cpp
+net/src/Matrix.cpp
 tests/tester.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
